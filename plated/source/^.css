@@ -42,6 +42,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 *		{width:100%; height:auto; min-height:1px; max-height:999999px;}
 body	{font-size:3rem;}
+.news em,
 .bio	{font-size:2rem;}
 .wrap	{display:block; padding-bottom:60px;}
 .news	{padding:40px;}
