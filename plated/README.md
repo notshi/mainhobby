@@ -26,19 +26,20 @@ _Commands above are for debian/ubuntu. For other operating systems, please the u
    - Create a name for your new repository and click **Begin import**
    - Go to your new repository when it's ready
     
-2. Woohoo! You should now have a brand new website.
-    - Check your URL - http://username.github.io/new-repo
-    - Your website should now work and contain the default plated-example landing page.
+2. Pick the right branch in **Pages** https://github.com/username/new-repo/settings/pages
+    - Under *Branch*, choose **gh-pages** branch to deploy from and click **Save**
 
 3. Enable Github Actions in **General** https://github.com/username/new-repo/settings/actions
     - Under *Actions permissions*, choose **Allow all actions and reusable workflows** and click **Save**
     - Under *Workflow permissions*, choose **Read and write permissions** and click **Save**
     - You can start editing your site and the changes will automatically be published using Github Actions.
   
-4. Enable actions under the **Actions** tab https://github.com/username/new-repo/actions
-    - Click on the green **Enable Actions on this repository** button
+4. Woohoo! You should now have a brand new website.
+    - Commit a change to build your website (for example, update your README.md)
+    - Check your URL - http://username.github.io/new-repo
+    - Your website should now work and contain the default plated-example landing page.
 
-5. Read [the next bit](#run-this-local) if you want to view your site locally before publishing.
+6. Read [the next bit](#run-this-local) if you want to view your site locally before publishing.
     
 ---
 
