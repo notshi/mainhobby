@@ -27,7 +27,7 @@ _Commands above are for debian/ubuntu. For other operating systems, please the u
    - Go to your new repository when it's ready
     
 2. Pick the right branch in **Pages** https://github.com/username/new-repo/settings/pages
-    - Under *Branch*, choose **master** branch to deploy from and click **Save**
+    - Under *Branch*, choose **gh-pages** branch to deploy from and click **Save**
 
 3. Enable Github Actions in **General** https://github.com/username/new-repo/settings/actions
     - Under *Actions permissions*, choose **Allow all actions and reusable workflows** and click **Save**
