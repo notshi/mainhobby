@@ -4,9 +4,6 @@
 
 html    {font-size:18px; scroll-behavior:smooth;}
 body	{background:#000; font-family:sans-serif; font-size:18px; font-weight:400; line-height:normal; color:#111; max-width:100%; overflow-x:hidden; padding:0; margin:0;}
-h1		{font-size:1.5em; font-weight:normal;}
-h2		{font-size:1.5em; font-weight:normal;}
-h3      {font-size:2.0em; font-weight:500; color:#736b62;}
 b		{font-weight:700;}
 i		{font-style:italic;}
 a		{color:#444; text-decoration:underline; transition:all 0.5s ease-out;}
@@ -14,32 +11,35 @@ p		{margin:10px 0;}
 
 
 /*	main background	*/
-.back	{width:100%; height:100vh; background:url('{_root}data/cover.png') center center; background-size:cover; position:fixed;}
+.back		{width:100%; height:100vh; background:url('{_root}data/cover.png') center center; background-size:cover; position:fixed;}
 
 /*	content	*/
-.cont	{position:absolute; left:50%;  transform:translateX(-50%); width:100%;} /*	https://css-tricks.com/the-fixed-background-attachment-hack/ */
-.wrap	{width:960px; margin:0 auto; display:flex;}
-.col	{width:480px;}
-.logo	{width:480px; height:300px; background:url('{_root}data/header.png') center center; background-size:cover; margin:0 auto;}
-.news	{width:100%; min-height:640px; background-color:#fff; line-height:1.2em; padding:20px 25px; margin:0 auto; overflow-y:scroll;}
-.news em{color:#666; font-size:14px;}
-.head	{font-weight:bold; font-style:italic; color:#f0f;}
-.ep		{width:100%; min-height:640px; margin:0 auto;}
-.band	{width:480px; margin:0 auto; display:flex; flex-flow:wrap; justify-content:center;}
-.shi	{width:100px; height:100px; background:url('{_root}data/shi_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
-.hel	{width:100px; height:100px; background:url('{_root}data/helen_sq1_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
-.dav	{width:100px; height:100px; background:url('{_root}data/dave_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
-.jem	{width:100px; height:100px; background:url('{_root}data/jem_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
-.bio	{padding:0; margin:0 auto; margin-bottom:40px; margin-left:60px; margin-right:60px; color:#fff; font-size:14px; text-align:center; font-weight:bold; text-shadow:1px 1px 5px #000; line-height:1.25em;}
-.contact	{width:100%; background-color:#fff; line-height:1.2em; padding:20px 25px; margin:2em auto; overflow-y:scroll;}
-.credits	{font-size:0.8em}
+.cont		{position:absolute; left:50%;  transform:translateX(-50%); width:100%;} /*	https://css-tricks.com/the-fixed-background-attachment-hack/ */
+.wrap		{width:960px; margin:0 auto; display:flex;}
+.col-1,
+.col-2		{width:480px;}
+.col-2		{display:flex; justify-content:space-around; flex-flow:column wrap;}
+.logo		{width:480px; height:300px; background:url('{_root}data/header.png') center center; background-size:cover; margin:0 auto;}
+.news		{width:100%; min-height:640px; background-color:#fff; line-height:1.2em; padding:20px 25px; margin:0 auto; overflow-y:scroll;}
+.contact em,
+.news em	{color:#666; font-size:14px;}
+.head		{font-weight:bold; font-style:italic; color:#f0f;}
+.ep			{width:100%; min-height:640px; margin:0 auto;}
+.band		{width:480px; margin:0 auto; display:flex; flex-flow:wrap; justify-content:center;}
+.shi		{width:100px; height:100px; background:url('{_root}data/shi_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
+.hel		{width:100px; height:100px; background:url('{_root}data/helen_sq1_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
+.dav		{width:100px; height:100px; background:url('{_root}data/dave_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
+.jem		{width:100px; height:100px; background:url('{_root}data/jem_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
+.bio		{margin:0 60px 20px 60px; color:#fff; font-size:16px; text-align:center; font-weight:bold; text-shadow:1px 1px 5px #000; line-height:1.25em;}
+.contact	{width:100%; background-color:#fff; padding:20px 25px; margin:0 auto; margin-bottom:2em;}
 
 /* Socials */
-.social 	{display:flex; justify-content: flex-end; width:100%; padding:1em}
-.footer		{justify-content: flex-start}
-ul.icons 	{display:flex}
-.icons li	{margin-right:1em}
-svg 		{display:block; width:3em; height:3em; color: #fff}
+.social 	{display:flex; justify-content:flex-end; width:100%; padding:1em; margin:0 auto;}
+.icons		{margin-right:1em;}
+.footer		{justify-content:flex-start;}
+svg 		{display:block; width:3em; height:3em; color:#fff; margin:0 auto;}
+.mob		{display:none;}
+
 
 /*	PHONES & STUFF
 	============================================= */
@@ -49,14 +49,22 @@ only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
 
-*		{width:100%; height:auto; min-height:1px; max-height:999999px;}
-body	{font-size:3rem;}
-.news em,
-.bio	{font-size:2rem;}
-.wrap	{display:block; padding-bottom:60px;}
-.news	{padding:40px;}
-.col,
-.band	{width:960px; padding-bottom:40px;}
+*			{width:100%; height:auto; min-height:1px; max-height:999999px;}
+body,
+.bio		{font-size:3rem;}
+.contact em,
+.news em	{font-size:2rem;}
+.nomob		{display:none;}
+.contact.mob,
+.wrap		{display:block;}
+.logo		{width:960px; height:600px; margin-top:-3em;}
+.news		{padding:40px;}
+.col-1,
+.col-2,
+.band		{width:960px; padding-bottom:40px;}
+.bio		{margin-bottom:1.2em;}
 .shi, .hel,
 .dav, .jem	{width:200px; height:200px;}
+.contact	{margin:1em auto;}
+.social		{justify-content:space-evenly;}
 }
