@@ -13,7 +13,9 @@ Main Hobby
 		<div class="col-1">
 			<div class="logo"></div>
 			<div class="news">
-				<div class="head">News</div>
+				<div class="head">
+					Main Hobby play twisted indie pop songs built around the songwriting talent of Jem Emmett.
+				</div>
 				{news}
 			</div>
 			<div class="contact nomob">
@@ -23,8 +25,8 @@ Main Hobby
 		</div>
 		<div class="col-2">
 			{social}
-			<div class="ep">{bandcamp}</div>
-			<div class="band">
+			<div class="ep_wrap">{bandcamp}</div>
+			<div class="band_wrap">
 				<div class="bio">{bio}</div>
 				<div class="shi"></div>
 				<div class="hel"></div>
@@ -32,7 +34,7 @@ Main Hobby
 				<div class="jem"></div>
 			</div>
 			<div class="contact mob">
-				<div class="head">Contact</div>
+				<div class="con_head">Contact</div>
 				{contact}
 			</div>
 		</div>
@@ -90,17 +92,19 @@ hello@mainhobby.co.uk
 #^------------------------------
 #^bandcamp trim=ends
 
+<div class="responsive">
+	<iframe src="https://bandcamp.com/EmbeddedPlayer/album=1642602949/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://mainhobby.bandcamp.com/album/live-at-the-1-in-12">Live At The 1 in 12 by Main Hobby</a></iframe>
+</div>
+
 #^------------------------------
 #^bio trim=ends form=markdown
-
-Main Hobby play twisted indie pop songs built around the songwriting talent of Jem Emmett.
 
 Based in Bradford, West Yorkshire, the band features shi Blank (*bass*), Helen Russell (*drums*), David Carpenter (*guitar*), and Jem Emmett (*vocals, guitar*).
 
 #^------------------------------
 #^news trim=ends form=markdown
 
-*21 April 2024*
+<div class="band_pic"></div>
 
 We played our debut gig at the legendary [1 in 12 club](https://www.facebook.com/1in12/) in Bradford with [West Yorkshire Noblemen's Society](https://www.youtube.com/channel/UCnUawdyHP_Z2axatoQNGN5g).
 It was great and many people came to support fundraising efforts needed for building improvements to make the club more accessible.
