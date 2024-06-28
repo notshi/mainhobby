@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head><title>Main Hobby</title>
+<head><meta charset="utf-8">
+<meta name="viewport" content="width-device-width, inital-scale=1.0, shrink-to-fit=no">
+<title>Main Hobby</title>
 <style>
 
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}img,embed,iframe,object,audio,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}
@@ -9,7 +11,8 @@ html    {font-size:18px; scroll-behavior:smooth;}
 body	{background:#000; font-family:sans-serif; font-size:18px; font-weight:400; line-height:normal; color:#111; max-width:100%; overflow-x:hidden; padding:0; margin:0;}
 b		{font-weight:700;}
 i		{font-style:italic;}
-a		{color:#444; text-decoration:underline; transition:all 0.5s ease-out;}
+a		{color:#006def; text-decoration:none; transition:all 0.5s ease-out;}
+a:hover	{text-decoration:underline;}
 p		{margin:10px 0;}
 
 
@@ -21,20 +24,26 @@ p		{margin:10px 0;}
 .wrap		{width:960px; margin:0 auto; display:flex;}
 .col-1,
 .col-2		{width:480px;}
-.col-2		{display:flex; justify-content:space-around; flex-flow:column wrap;}
+.col-2		{display:flex; justify-content:space-evenly; flex-flow:column wrap;}
 .logo		{width:480px; height:300px; background:url('./data/header.png') center center; background-size:cover; margin:0 auto;}
-.news		{width:100%; min-height:640px; background-color:#fff; line-height:1.2em; padding:20px 25px; margin:0 auto; overflow-y:scroll;}
+.news		{width:100%; min-height:640px; background-color:#fff; line-height:1.25em; padding:20px 25px; margin:0 auto; overflow-y:scroll; overflow-x:hidden;}
 .contact em,
 .news em	{color:#666; font-size:14px;}
-.head		{font-weight:bold; font-style:italic; color:#f0f;}
-.ep			{width:100%; min-height:640px; margin:0 auto;}
-.band		{width:480px; margin:0 auto; display:flex; flex-flow:wrap; justify-content:center;}
+.head		{font-weight:bold; font-style:italic; color:#206f1d; margin:1em 0; line-height:1.2em; border-bottom:1px solid #ccc; padding-bottom:1em;}
+.con_head	{font-weight:bold; font-style:italic; color:#f0f; margin:0.5em 0;}
+.ep_wrap	{margin:0 auto;}
+.band_wrap	{width:480px; margin:0 auto; display:flex; flex-flow:wrap; justify-content:center;}
+.band_pic	{width:420px; height:279px; background:url('./data/band.jpg') center center; background-size:cover; margin-bottom:1em;}
 .shi		{width:100px; height:100px; background:url('./data/shi_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .hel		{width:100px; height:100px; background:url('./data/helen_sq1_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .dav		{width:100px; height:100px; background:url('./data/dave_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .jem		{width:100px; height:100px; background:url('./data/jem_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .bio		{margin:0 60px 20px 60px; color:#fff; font-size:16px; text-align:center; font-weight:bold; text-shadow:1px 1px 5px #000; line-height:1.25em;}
 .contact	{width:100%; background-color:#fff; padding:20px 25px; margin:0 auto; margin-bottom:2em;}
+
+/*	bandcamp */
+.responsive {margin:0 auto;}
+.responsive iframe {width:350px; height:600px;}
 
 /* Socials */
 .social 	{display:flex; justify-content:flex-end; width:100%; padding:1em; margin:0 auto;}
@@ -53,6 +62,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
 
 *			{width:100%; height:auto; min-height:1px; max-height:999999px;}
+p			{margin: 0 0 1em 0;}
 body,
 .bio		{font-size:3rem;}
 .contact em,
@@ -64,12 +74,18 @@ body,
 .news		{padding:40px;}
 .col-1,
 .col-2,
-.band		{width:960px; padding-bottom:40px;}
-.bio		{margin-bottom:1.2em;}
+.band_wrap	{width:960px; padding-bottom:40px;}
+.band_pic	{width:880px; height:584px;}
+.ep_wrap,
+.bio		{width:100%; margin-bottom:1.2em;}
 .shi, .hel,
 .dav, .jem	{width:200px; height:200px;}
 .contact	{margin:1em auto;}
 .social		{justify-content:space-evenly;}
+
+/*	bandcamp	Thanks to https://stackoverflow.com/questions/56522756/making-bandcamp-iframe-responsive-centering-and-overflow-issues */
+.responsive {width:100%; height:0; padding-bottom:100%; position:relative; overflow:hidden;}
+.responsive iframe {position:absolute; height:100%; width:100%; max-width:800px; transform:translate(-50%, -50%); top:50%; left:55%;}
 }
 
 </style></head>
@@ -92,8 +108,11 @@ body,
 		<div class="col-1">
 			<div class="logo"></div>
 			<div class="news">
-				<div class="head">News</div>
-				<p><em>21 April 2024</em></p>
+				<div class="head">
+					Main Hobby play twisted indie pop songs built around the songwriting talent of Jem Emmett.
+				</div>
+				<div class="band_pic"></div>
+
 <p>We played our debut gig at the legendary <a href="https://www.facebook.com/1in12/">1 in 12 club</a> in Bradford with <a href="https://www.youtube.com/channel/UCnUawdyHP_Z2axatoQNGN5g">West Yorkshire Noblemen&#39;s Society</a>.
 It was great and many people came to support fundraising efforts needed for building improvements to make the club more accessible.</p>
 <p>More info about the 1 in 12 fundraiser can be found <a href="https://www.justgiving.com/crowdfunding/1in12-Refurbishment">here</a>.</p>
@@ -101,7 +120,7 @@ It was great and many people came to support fundraising efforts needed for buil
 			</div>
 			<div class="contact nomob">
 				<div class="head">Contact</div>
-				<p><a href="mailto:&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#64;&#109;&#x61;&#105;&#110;&#104;&#111;&#x62;&#98;&#121;&#x2e;&#x63;&#x6f;&#46;&#117;&#x6b;">&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#64;&#109;&#x61;&#105;&#110;&#104;&#111;&#x62;&#98;&#121;&#x2e;&#x63;&#x6f;&#46;&#117;&#x6b;</a>
+				<p><a href="mailto:&#x68;&#101;&#x6c;&#108;&#111;&#64;&#x6d;&#97;&#105;&#110;&#104;&#x6f;&#x62;&#x62;&#x79;&#46;&#x63;&#x6f;&#x2e;&#x75;&#x6b;">&#x68;&#101;&#x6c;&#108;&#111;&#64;&#x6d;&#97;&#105;&#110;&#104;&#x6f;&#x62;&#x62;&#x79;&#46;&#x63;&#x6f;&#x2e;&#x75;&#x6b;</a>
 <div class="social footer">
 	<div class="icons">
 		<a href="https://mainhobby.bandcamp.com/"><svg role="img" fill="#000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bandcamp</title><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/></svg></a>
@@ -129,10 +148,11 @@ It was great and many people came to support fundraising efforts needed for buil
 		<a href="https://www.facebook.com/profile.php?id=61558193243214"><svg role="img" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Facebook</title><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
 	</div>
 </div>
-			<div class="ep"></div>
-			<div class="band">
-				<div class="bio"><p>Main Hobby play twisted indie pop songs built around the songwriting talent of Jem Emmett.</p>
-<p>Based in Bradford, West Yorkshire, the band features shi Blank (<em>bass</em>), Helen Russell (<em>drums</em>), David Carpenter (<em>guitar</em>), and Jem Emmett (<em>vocals, guitar</em>).</p>
+			<div class="ep_wrap"><div class="responsive">
+	<iframe src="https://bandcamp.com/EmbeddedPlayer/album=1642602949/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://mainhobby.bandcamp.com/album/live-at-the-1-in-12">Live At The 1 in 12 by Main Hobby</a></iframe>
+</div></div>
+			<div class="band_wrap">
+				<div class="bio"><p>Based in Bradford, West Yorkshire, the band features shi Blank (<em>bass</em>), Helen Russell (<em>drums</em>), David Carpenter (<em>guitar</em>), and Jem Emmett (<em>vocals, guitar</em>).</p>
 </div>
 				<div class="shi"></div>
 				<div class="hel"></div>
@@ -140,8 +160,8 @@ It was great and many people came to support fundraising efforts needed for buil
 				<div class="jem"></div>
 			</div>
 			<div class="contact mob">
-				<div class="head">Contact</div>
-				<p><a href="mailto:&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#64;&#109;&#x61;&#105;&#110;&#104;&#111;&#x62;&#98;&#121;&#x2e;&#x63;&#x6f;&#46;&#117;&#x6b;">&#x68;&#x65;&#x6c;&#x6c;&#x6f;&#64;&#109;&#x61;&#105;&#110;&#104;&#111;&#x62;&#98;&#121;&#x2e;&#x63;&#x6f;&#46;&#117;&#x6b;</a>
+				<div class="con_head">Contact</div>
+				<p><a href="mailto:&#x68;&#101;&#x6c;&#108;&#111;&#64;&#x6d;&#97;&#105;&#110;&#104;&#x6f;&#x62;&#x62;&#x79;&#46;&#x63;&#x6f;&#x2e;&#x75;&#x6b;">&#x68;&#101;&#x6c;&#108;&#111;&#64;&#x6d;&#97;&#105;&#110;&#104;&#x6f;&#x62;&#x62;&#x79;&#46;&#x63;&#x6f;&#x2e;&#x75;&#x6b;</a>
 <div class="social footer">
 	<div class="icons">
 		<a href="https://mainhobby.bandcamp.com/"><svg role="img" fill="#000" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bandcamp</title><path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/></svg></a>
