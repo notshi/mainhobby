@@ -29,6 +29,7 @@ p		{margin:10px 0;}
 .ep_wrap	{margin:0 auto;}
 .band_wrap	{width:480px; margin:0 auto; display:flex; flex-flow:wrap; justify-content:center;}
 .band_pic	{width:420px; height:279px; background:url('{_root}data/band.jpg') center center; background-size:cover; margin-bottom:1em;}
+.gig_poster_pic	{width:420px; height:525px; background:url('{_root}data/gig.jpg') center center; background-size:cover; margin-bottom:1em;}
 .shi		{width:100px; height:100px; background:url('{_root}data/shi_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .hel		{width:100px; height:100px; background:url('{_root}data/helen_sq1_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
 .dav		{width:100px; height:100px; background:url('{_root}data/dave_sq_bw.jpg') center center; background-size:cover; border-radius:150px; border:3px solid #fff;}
